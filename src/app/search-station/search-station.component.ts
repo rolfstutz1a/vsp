@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 import { TransportService } from '../transport.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'vsp-search-station',
@@ -9,9 +9,18 @@ import { Observable } from 'rxjs';
 })
 export class SearchStationComponent implements OnInit {
 
-  stations: Object;
+  searchStations: FormControl = new FormControl();
 
-  constructor(private transport: TransportService) { }
+  searchResult: any = [];
+
+  constructor(private service: TransportService) {
+    this.searchStations.valueChanges
+      .subscribe(data => {
+        this.service.searchStation(data).subscribe(response => {
+          this.searchResult = response['stations'];
+        });
+      });
+  }
 
   ngOnInit() {
   }
