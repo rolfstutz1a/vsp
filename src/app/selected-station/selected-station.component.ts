@@ -3,11 +3,11 @@ import { Station } from '../station';
 import { StationService } from '../station.service';
 
 @Component({
-  selector: 'vsp-connections',
-  templateUrl: './connections.component.html',
-  styleUrls: ['./connections.component.css']
+  selector: 'vsp-selected-station',
+  templateUrl: './selected-station.component.html',
+  styleUrls: ['./selected-station.component.css']
 })
-export class ConnectionsComponent implements OnInit  {
+export class SelectedStationComponent implements OnInit {
 
   station: Station = Station.createInitialStation();
 

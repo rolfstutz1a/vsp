@@ -9,12 +9,14 @@ import { ConnectionsComponent } from './connections/connections.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule, MatInputModule } from '@angular/material';
+import { SelectedStationComponent } from './selected-station/selected-station.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchStationComponent,
-    ConnectionsComponent
+    ConnectionsComponent,
+    SelectedStationComponent
   ],
   imports: [
     BrowserModule,

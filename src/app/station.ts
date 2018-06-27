@@ -8,8 +8,8 @@ export class Station {
         this.name = name;
     }
 
-    public static createNone() {
-        return new Station('0', '');
+    public static createInitialStation() {
+        return new Station('8502119', 'Lenzburg');
     }
 
     public toString = (): string => {

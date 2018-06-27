@@ -14,7 +14,7 @@ export class SearchStationComponent implements OnInit {
   @Output() changeSelectedStation = new EventEmitter<Station>();
 
   searchStations: FormControl = new FormControl();
-  selectedStation: Station = Station.createNone();
+  selectedStation: Station = Station.createInitialStation();
   searchResult: any = [];
 
   constructor(private transportService: TransportService, private stationService: StationService) {
@@ -31,7 +31,7 @@ export class SearchStationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.stationService.currentStation.subscribe(station => this.selectedStation = station);
+    // this.stationService.currentStation.subscribe(station => this.selectedStation = station);
   }
 
   onSelectStation(station: Station) {

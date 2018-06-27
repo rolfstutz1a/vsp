@@ -1,5 +1,9 @@
 
-input, .mat-input-element {
-    padding: 3px 7px !important;
-    border: 1px solid #cccccc !important;
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.search-station {
+    float: left;
+    margin: 10px 20px 10px 0;
+    max-width: 25%;
+    border: 1px solid cornflowerblue;
 }

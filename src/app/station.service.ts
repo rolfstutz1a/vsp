@@ -7,7 +7,7 @@ import { Station } from './station';
 })
 export class StationService {
 
-  private stationSource = new BehaviorSubject(Station.createNone());
+  private stationSource = new BehaviorSubject(Station.createInitialStation());
   currentStation = this.stationSource.asObservable();
 
   constructor() { }
