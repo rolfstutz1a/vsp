@@ -4,6 +4,16 @@
 .search-station {
     float: left;
     margin: 10px 20px 10px 0;
-    max-width: 25%;
-    border: 1px solid cornflowerblue;
+    min-width: 25%;
+    /* border: 1px solid cornflowerblue; */
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.search-station-container {
+    display: flex; 
+    /* border: 1px solid red;  */
+    align-items: center;
 }

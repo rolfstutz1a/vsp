@@ -1,3 +1,22 @@
-<p>
-    <span>{{station.id}}</span> <span>{{station.name}}</span>
-</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Abfahrt</th>
+            <th>Verspätung</th>
+            <th>Gleis</th>
+            <th>Nummer</th>
+            <th>Ziel</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of connections" >
+                <td>{{ item.departure | date:'HH:mm' }}</td>
+                <td>{{ item.delay }}</td>
+                <td>{{ item.platform }}</td>
+                <td>{{ item.number }}</td>
+                <td>{{ item.to }}</td>
+            </tr>
+    
+    </tbody>
+</table>

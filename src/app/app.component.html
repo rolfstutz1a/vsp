@@ -1,13 +1,19 @@
-
-<h1>Verspätete Verbindungen</h1>
+<h1>
+        Verspätete Verbindungen</h1>
 
 <h2>Haltestelle</h2>
-<div style="display: flex; border: 1px solid red; align-items: center;">
+<section class="search-station-container">
         <vsp-selected-station class="search-station"></vsp-selected-station>
         <vsp-search-station class="search-station"></vsp-search-station>
-</div>
+</section>
 
 <h2>Verspätungen</h2>
 <vsp-connections></vsp-connections>
+
+<footer>
+        <p>Powered by
+                <a href="http://opendata.ch/">Opendata.ch</a>
+        </p>
+</footer>
 
 <router-outlet></router-outlet>

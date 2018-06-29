@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TransportService } from '../transport.service';
 import { StationService } from '../station.service';
@@ -10,8 +10,6 @@ import { Station } from '../station';
   styleUrls: ['./search-station.component.css']
 })
 export class SearchStationComponent implements OnInit {
-
-  @Output() changeSelectedStation = new EventEmitter<Station>();
 
   searchStations: FormControl = new FormControl();
   selectedStation: Station = Station.createInitialStation();
@@ -30,13 +28,10 @@ export class SearchStationComponent implements OnInit {
       });
   }
 
-  ngOnInit() {
-    // this.stationService.currentStation.subscribe(station => this.selectedStation = station);
-  }
+  ngOnInit() { }
 
   onSelectStation(station: Station) {
     this.selectedStation = station;
     this.stationService.changeStation(station);
-    console.log('sta: ' + station);
   }
 }
